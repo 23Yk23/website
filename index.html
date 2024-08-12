@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="gameboy" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/198px-Game-Boy-FL.jpg">
+
+  <title>The YKPG</title>
+</head>
+<body>
+  <header style="position: relative;"> 
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">YK</a>
+        <div>
+          <a href="#Hakkında" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Hakkında</a>
+          <a href="#Oyunlar" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Oyunlar</a>
+          <a href="#Yakında" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Yakında</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">İletişim</a>
+        </div>
+      </div>
+
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#Hakkında" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Hakkında</a>
+        <a href="#Oyunlar" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Oyunlar</a>
+        <a href="#Yakında" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Yakında</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="hero" id="Hakkında">
+      <div class="hero-description">
+        <div class="hero-text">
+          <h2 class="hero-title">Hakkımda</h2>
+          <div style="text-align: center;"> 
+            <p>
+              Merhaba ben Yiğit. Küçük küçük oyunlar yaparak bu siteye yüklemeyi düşünüyorum. Bu benim ilk web tasarım deneyimim,  o yüzden illaki hatalar ve ya eksikler olacaktır. Bunun dışında yakında bütün minigamelerimiz sizlerle olacaktır.
+            </p>
+          </div>
+          <span class="w3-text-white social" style="margin-top:050px">
+            <p>Sosyal medyalarım:</p>
+            <div class="w3-margin-top">
+              <a href="https://www.instagram.com/yiigitkaraca/" target="_blank"><i class="fa fa-instagram w3-hover-opacity icons"></i></a>
+              <a href="https://twitter.com/3M0rty" target="_blank"><i class="fa fa-twitter w3-hover-opacity icons"></i></a>
+              <a href="https://accounts.snapchat.com/accounts/snapcodes" target="_blank"><i class="fa fa-snapchat w3-hover-opacity icons"></i></a>
+              <a href="https://www.facebook.com/yigit.karaca.79/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity icons"></i></a>
+              <a href="https://steamcommunity.com/profiles/76561198854340707" target="_blank"><i class="fa fa-steam w3-hover-opacity icons"></i></a>
+              <a href="https://open.spotify.com/user/ch2bjpdgadnbjqd003w9q77r4" target="_blank"><i class="fa fa-spotify w3-hover-opacity icons"></i></a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main style="padding-bottom:50px ;">
+   
+    <div class="Oyunlar">
+      <h2 class="title" id="Oyunlar">Oyunlar</h2>
+      <div class="game-list">
+
+          <button onclick="openNewPage()" id="gamebuton" class="w3-btn w3-red w3-margin-top w3-round">YKPG</button>
+
+       <script>
+        function openNewPage() {
+            window.location.href = 'ykpg.html';
+        }
+    </script>
+        <p></p>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="event" id="Yakında" >
+    <div class="event-hero" style="position: relative; ">
+      <div class="event-text">
+         <h2 class="title">Yakında</h2>
+        <h2 class="badge" style="background-color: orange; color:#000015 ;padding:10px"> YKPG | 23 ARALIK 2023 </h2>
+        <h1 class="event-title">Yİğİt'İn başlangıç oyunu.</h1>
+
+        <p>Birbirinden farklı 10 oyunun aynı çatı altında birleştiği küçük bir parti oyunu.</p>
+        <h4>İlk oynayan siz olun</h4>
+        <div>
+          <label id="icon" for="name">Ad Soyad</label>
+          <br>
+          <input type="text" name="name" id="name" placeholder="Ad Soyad" required/>
+          <br>
+          <br>
+          <label id="icon" for="name">E-mail</label>
+          <br>
+          <input type="text" name="email" id="email" placeholder="E-mail" required/>
+        </div>
+        <button class="w3-btn w3-red w3-margin-top w3-round">Başvur</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="title">Bana ulaşın</h2>
+      <div class="contact" id="contact" style="padding-bottom: 10px !important;">
+      <div class="contact-list contact-address"  >
+        <a href="https://www.google.com/maps/place/Feneryolu,+fahrettin+Kerim+Gökay+Cd.+No:92,+34724+Kadıköy%2Fİstanbul/@40.9851854,29.0483689,18z/data=!3m1!4b1!4m6!3m5!1s0x14cac788f55a45dd:0xc467cd5aa0ac3a86!8m2!3d40.9851836!4d29.0495414!16s%2Fg%2F11csgd02pr?entry=ttu" target="_blank"class="fa fa-map-marker w3-xlarge w3-text-light-grey"> Adres</a>
+        <p>Feneryolu, Fahrettin Kerim Gökay Cd. No:92, 34724 Kadıköy/İstanbul </p>
+  
+      </div>
+     
+      <div class="contact-list" >
+        <h5><span><i class="fa fa-phone w3-xlarge w3-text-light-grey"></i></span>İletişim</h5>
+        <p> Tel: 0542 435 97 99 <a href="https://web.whatsapp.com" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity icons"></i></a></p>
+        <p>Email: Yiigitkaracayazilim@outlook.com</p>
+      </div>
+
+      </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+</body>
+</html>
