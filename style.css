@@ -1,0 +1,133 @@
+
+:root {
+    background-color: rgba(0, 0, 21, 1);
+    
+}
+.heeder-large-screen{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    color:orange;
+    font-size: 18px !important;
+
+
+}
+#navDemo{
+    background-color: #000015;
+    
+}
+#navDemo a{
+    font-size: 13px !important;
+    color:orange;
+}
+.hero{
+    height: 650px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-color: #000015; 
+}
+.button{
+margin-left: 300px;
+margin-trim: 100px;
+}
+.hero-description{
+    height: 650px;
+    background-color: #000000;
+    display: flex;
+}
+.hero-text{
+    width:70% !important;
+    margin: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.hero-text p{
+    color:white;
+    width: 50%;
+
+}
+.hero-title{
+     font-weight: 10;
+    text-transform: uppercase;
+    font-size: 80px;
+    color:orange;
+    
+    text-align: center;
+
+}
+.social{
+    width:100%;
+}
+.icons{
+    font-size: 20px;
+    letter-spacing: 5px;
+
+}
+main{
+    width:80% !important;
+    margin: auto !important;
+}
+.title{
+    color:white;
+    font-weight: 600;
+    font-size: 40px;;
+    margin:50px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+  }
+
+h3{
+    color:white;
+    text-align: center;
+    padding: 50px;
+}
+h4{
+    color:white;
+    font-weight: 700;
+}
+.event-hero{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 75, 255, 0.1);
+    justify-content: space-evenly;
+    align-items: center;
+    padding:50px;
+    margin-top: 50px;
+    border:1px solid black;
+    border-radius: 10px;
+}
+.event-text{
+    width:50%;
+    color: orange;
+
+}
+.event-title{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.event-text p{
+    color: white;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.contact-list{
+    margin-top: 15px !important;
+    color: white;
+}
+h5{
+    color:white;
+}
+span{
+    padding-right: 10px;
+}
