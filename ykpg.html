@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+  <title>YKPG</title>
+ <style>
+  body {
+    margin: 11110;
+    height: 1000;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3b8aa;
+  }
+
+  canvas {
+    max-width: 100%;
+    display: block;
+  }
+</style>
+</head>
+<div id="geriSayim"></div>
+
+<body>
+   <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
+
+  <script defer src="game.js"></script>
+    <script>
+        const gameState = { score: 0 ,
+score1: 0
+};
+let codey1;
+
+class Scene1 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene1' });
+	}
+
+	create() {
+	
+	   this.add.text(95, 50, 'Welcome to YKPG ', { fontSize: '30px', fill: '#000000' });
+		this.add.text(210, 300, 'Go on', { fontSize: '20px', fill: '#000000' });
+		this.add.text(360, 490, 'Presented by Yk',  { fontSize: '10px', fill: '#000000' });
+
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene1');
+			this.scene.start('Scene2');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene1');
+			this.scene.start('Scene2');
+		});
+	}
+}
+
+class Scene2 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene2' });
+	}
+
+	create() {
+	   this.add.text(85, 70, 'Welcome to Game 1',      { fontSize: '30px', fill: '#000000' });
+		this.add.text(185, 130, 'Snatch',               { fontSize: '30px', fill: '#000000' });
+		this.add.text(150, 300, 'Press to Start',       { fontSize: '20px', fill: '#000000' });
+		this.add.text(360, 490, 'Presented by Yk',      { fontSize: '10px', fill: '#000000' });
+		this.add.text(10, 420, 'Controls',              { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 440, 'Left arrow ←',           { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 460, 'Right arrow →',          { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 480, 'Jump button ↑',          { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 430, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(4, 430, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(8, 430, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(12, 430, '—',                     { fontSize: '10px', fill: '#000000' });	
+		this.add.text(16, 430, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(20, 430, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(24, 430, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(28, 430, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(32, 430, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(36, 430, '—',                   	{ fontSize: '10px', fill: '#000000' });
+		this.add.text(40, 430, '—',     			         { fontSize: '10px', fill: '#000000' });
+		this.add.text(44, 430, '—',      			      { fontSize: '10px', fill: '#000000' });
+		this.add.text(48, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(52, 430, '—',      	  			   { fontSize: '10px', fill: '#000000' });
+		this.add.text(56, 430, '—',         			 	{ fontSize: '10px', fill: '#000000' });
+		this.add.text(60, 430, '—',      			      { fontSize: '10px', fill: '#000000' });
+		this.add.text(64, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(68, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(72, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(76, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(80, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(84, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(88, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(92, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(96, 430, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(100, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(104, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(108, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(112, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(116, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(120, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(124, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(128, 430, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(130, 435, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 440, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 450, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 460, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 460, '| ',   			 			{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 470, '| ',   			 			{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 480, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 490, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 500, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene2');
+			this.scene.start('Scene3');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene2');
+			this.scene.start('Scene3');
+		});
+	}
+}
+
+class Scene3 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene3' });
+	}
+	preload() {
+		this.load.image('codey', 'https://content.codecademy.com/courses/learn-phaser/physics/codey.png');
+	}
+
+	create() {
+		
+		codey1 = this.physics.add.sprite(225, 400, 'codey').setScale(0.5);
+		codey1.setCollideWorldBounds(true);
+		const platforms = this.physics.add.staticGroup();
+		platforms.create(225, 500, 'platform').setScale(100, 0.2).refreshBody();
+      this.physics.add.collider(codey1, platforms);
+		gameState.cursors = this.input.keyboard.createCursorKeys();
+		gameState.scoreText = this.add.text(350, 10, 'Score: 0', { fontSize: '15px', fill: '#000000' });
+		gameState.timer = 30;
+		gameState.timerText = this.add.text(360, 30, 'Time: ' + gameState.timer, { fontSize: '15px', fill: '#000000' });
+
+		const box = this.physics.add.group();
+		const boxGen = () => {
+			const xCoord = Math.random() * 450;
+			box.create(xCoord, -17, 'box');
+		}
+
+		boxGen();
+		const boxbox = this.time.addEvent({
+			delay: 250,
+			callback: boxGen,
+			callbackScope: this,
+			loop: true,
+		})
+
+		this.physics.add.collider(box, codey1, boxCollisionHandler);
+
+		function boxCollisionHandler(codey1, box) {
+			box.destroy();
+			gameState.score += 20;
+			gameState.scoreText.setText(`Score: ${gameState.score}`);
+		}
+	
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene3');
+			this.scene.start('Scene4');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene3');
+			this.scene.start('Scene4');
+		});
+		
+	}
+
+	update(){
+		if (gameState.timer > 0) {
+		 if (gameState.timer < 0.5) {
+        this.cameras.main.shake(1000, .001,false, function(camera, progress) {
+          
+            
+          
+        });
+      }
+		if (gameState.cursors.left.isDown) {
+				codey1.setVelocityX(-260);
+				codey1.setGravityY(200);
+			} else if (gameState.cursors.right.isDown) {
+				codey1.setVelocityX(260);
+				codey1.setGravityY(200);
+			} else if ((gameState.cursors.up.isDown) && codey1.body.touching.down) {
+				codey1.setVelocityY(-200);
+				codey1.setGravityY(200);
+			} else {
+				codey1.setVelocityX(0);
+			}
+			if (codey1.body.touching.down) {
+				codey1.setGravityY(0); 
+			} else {
+				codey1.setGravityY(200); 
+			}
+			
+			gameState.timer -= 0.031;
+			gameState.timerText.setText('Time: ' + gameState.timer);
+		} else {
+			this.add.text(150, 250, 'Click to continue', { textSize: '30px', fill: '#00000' });
+				this.add.text(170, 230, 'Time is up', { fontSize: '20px', fill: '#000000' });
+			this.physics.pause();
+		}
+	}
+}
+	
+class Scene4 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene4' });
+	}
+
+	create() {
+	this.add.text(120, 120, `Your Score: ${gameState.score}`, { fontSize: '30px', fill: '#000000' });
+		this.add.text(210, 320, 'Click to continue =>', { fontSize: '20px', fill: '#000000' });
+	
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene4');
+			this.scene.start('Scene5');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene4');
+			this.scene.start('Scene5');
+		});
+	}
+}
+	
+class Scene5 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene5' });
+	}
+
+	create() {
+		this.add.text(85, 70, 'Welcome to Game 2',      { fontSize: '30px', fill: '#000000' });
+		this.add.text(90, 130, 'Hustle and Bustle',     { fontSize: '30px', fill: '#000000' });
+		this.add.text(150, 300, 'Press to Start',       { fontSize: '20px', fill: '#000000' });
+this.add.text(360, 490, 'Presented by Yk',            { fontSize: '10px', fill: '#000000' });
+		this.add.text(10, 440, 'Controls',              { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 460, 'Left arrow ←',           { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 480, 'Right arrow →',          { fontSize: '15px', fill: '#000000' });
+		this.add.text(0, 450, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(4, 450, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(8, 450, '—',                      { fontSize: '10px', fill: '#000000' });
+		this.add.text(12, 450, '—',                     { fontSize: '10px', fill: '#000000' });	
+		this.add.text(16, 450, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(20, 450, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(24, 450, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(28, 450, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(32, 450, '—',                     { fontSize: '10px', fill: '#000000' });
+		this.add.text(36, 450, '—',               	   { fontSize: '10px', fill: '#000000' });
+		this.add.text(40, 450, '—',     			         { fontSize: '10px', fill: '#000000' });
+		this.add.text(44, 450, '—',      			      { fontSize: '10px', fill: '#000000' });
+		this.add.text(48, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(52, 450, '—',      	  			   { fontSize: '10px', fill: '#000000' });
+		this.add.text(56, 450, '—',         			 	{ fontSize: '10px', fill: '#000000' });
+		this.add.text(60, 450, '—',      				   { fontSize: '10px', fill: '#000000' });
+		this.add.text(64, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(68, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(72, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(76, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(80, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(84, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(88, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(92, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(96, 450, '—',      					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(100, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(104, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(108, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(112, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(116, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(120, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(124, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(128, 450, '—',     					{ fontSize: '10px', fill: '#000000' });
+		this.add.text(130, 455, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 460, '| ',   			 			{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 470, '| ',   			 			{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 480, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 490, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.add.text(130, 500, '| ',    					{ fontSize: '15px', fill: '#000000' });
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene5');
+			this.scene.start('Scene6');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene5');
+			this.scene.start('Scene6');
+		});
+	}
+}
+
+class Scene6 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene6' });
+	}
+preload() {
+  this.load.image('platform', 'https://content.codecademy.com/courses/learn-phaser/physics/platform.png');
+  this.load.image('codey', 'https://content.codecademy.com/courses/learn-phaser/physics/codey.png');
+}
+
+
+create() {
+  gameState.player2 = this.physics.add.sprite(225, 450, 'codey').setScale(0.5);
+  
+  const platforms2 = this.physics.add.staticGroup();
+
+  platforms2.create(225, 490, 'platform').setScale(1, 0.3).refreshBody();
+
+  gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
+
+  gameState.player2.setCollideWorldBounds(true);
+
+  this.physics.add.collider(gameState.player2, platforms2);
+  
+	gameState.cursors = this.input.keyboard.createCursorKeys();
+
+  const bugs = this.physics.add.group();
+
+  function bugGen () {
+    const xCoord = Math.random() * 450;
+    bugs.create(xCoord, -20, 'bug1');
+  }
+
+  const bugGenLoop = this.time.addEvent({
+    delay: 100,
+    callback: bugGen,
+    callbackScope: this,
+    loop: true,
+  });
+
+  this.physics.add.collider(bugs, platforms2, function (bug) {
+    bug.destroy();
+    gameState.score1 += 10;
+    gameState.scoreText.setText(`Score: ${gameState.score1}`);
+  })
+  
+  this.physics.add.collider(gameState.player2, bugs, () => {
+    bugGenLoop.destroy();
+    this.physics.pause();
+  })
+  }
+update(){
+ if (gameState.cursors.left.isDown) {
+    gameState.player2.setVelocityX(-160);
+  } else if (gameState.cursors.right.isDown) {
+    gameState.player2.setVelocityX(160);
+  } else {
+    gameState.player2.setVelocityX(0);
+  }
+
+
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene6');
+			this.scene.start('Scene7');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene6');
+			this.scene.start('Scene7');
+		});
+	}
+}	
+	
+class Scene7 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene7' });
+	}
+
+	create() {
+	this.add.text(120, 120, `Your Score: ${gameState.score1}`, { fontSize: '30px', fill: '#000000' });
+		this.add.text(210, 320, 'Click to continue =>', { fontSize: '20px', fill: '#000000' });
+	
+		this.input.on('pointerup', () => {
+			this.scene.stop('Scene7');
+			this.scene.start('Scene8');
+		});
+		this.input.keyboard.on('keydown_SPACE', () => {
+			this.scene.stop('Scene7');
+			this.scene.start('Scene8');
+		});
+	}
+}
+	
+class Scene8 extends Phaser.Scene {
+	constructor() {
+		super({ key: 'Scene8' });
+	}
+create(){
+this.add.text(120, 120, `Thanks for game.`, { fontSize: '20px', fill: '#000000' });
+this.add.text(160, 160, `Bye Bye.`, { fontSize: '20px', fill: '#000000' });
+this.add.text(130, 310, `Click to exit `, { fontSize: '20px', fill: '#000000' });
+this.add.text(195, 330, `↓ `, { fontSize: '55px', fill: '#000000' });
+const button = this.add.text(160, 385, 'Main Page', { fontSize: '20px', fill: '#000000' })
+     .setInteractive()  
+	  button.on('pointerup', () => {
+  	 window.location.href = 'https://yigitkaraca.w3spaces.com';  
+        });
+		
+		  
+        
+		
+	
+}
+}
+
+
+
+	
+const config = {
+	type: Phaser.AUTO,
+	width: 450,
+	height: 500,
+	backgroundColor: "b9eaff",
+	physics: {
+		default: 'arcade',
+		arcade: {
+			gravity: { y: 150 },
+			enableBody: true,
+		}
+	},
+	scene: [Scene1, Scene2,Scene3,Scene4,Scene5,Scene6,Scene7,Scene8]
+};
+
+const game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
